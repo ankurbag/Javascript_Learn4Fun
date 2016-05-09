@@ -1,0 +1,30 @@
+<!doctype html>
+<html >
+<head>
+
+<script>
+	/**
+		Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception. This concept is known as hoisting; variables in JavaScript are in a sense "hoisted" or lifted to the top of the function or statement.
+	**/
+	/**
+	 * Example 1
+	 */
+	console.log(x === undefined); // true
+	var x = 3;
+
+	/**
+	 * Example 2
+	 */
+	// will return a value of undefined
+	var myvar = "my value";
+	 
+	(function() {
+	  console.log(myvar); // undefined
+	  var myvar = "local value";
+	})();
+</script>
+</head>
+<body>
+
+</body>
+</html>

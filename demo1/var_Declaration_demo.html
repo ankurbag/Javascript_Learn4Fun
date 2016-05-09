@@ -1,0 +1,33 @@
+<!--Demo 1 : JS Variables types -->
+<script>
+//Using Var
+// var a=b=3; //var a = 3 , var b = 3;
+//b=3,var a
+console.log("The value of a is " + a); // logs "The value of a is undefined"
+console.log("The value of b is " + b); // throws ReferenceError exception
+/*
+You can use undefined to determine whether a variable has a value. In the following code, the variable input is not assigned a value, and the if statement evaluates to true.
+*/
+var input;
+if(input === undefined){
+  console.log("Input is undefined");
+} else {
+  console.log("Input is not undefined");
+}
+/**
+	The undefined value behaves as false when used in a boolean context.
+**/
+var myArray = [];
+if (!myArray[0]) console.log("myArray is undefined at position 0");
+
+//Undefined evaluates to NaN
+var a;
+console.log(a*2);
+
+/**
+Null Object
+**/
+var b = null;
+console.log(typeof b);
+console.log(b+6);
+</script>

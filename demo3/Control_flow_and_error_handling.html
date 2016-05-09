@@ -1,0 +1,21 @@
+<!doctype html>
+<html >
+<head>
+
+<script>
+	/**
+		Block statement
+	/**
+	JavaScript prior to ECMAScript 6 does not have block scope. Variables introduced within a block are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. In other words, block statements do not define a scope. "Standalone" blocks in JavaScript can produce completely different results from what they would produce in C or Java. For example:
+	**/
+	var x = 1;
+	{
+	  var x = 2;
+	}
+	console.log(x); 
+</script>
+</head>
+<body>
+
+</body>
+</html>

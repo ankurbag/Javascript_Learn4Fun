@@ -1,0 +1,30 @@
+<!doctype html>
+<html >
+<head>
+
+<script>
+	/**
+		JavaScript before ECMAScript 6 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.
+	**/
+
+	if (true) {
+	  var x = 5;
+	}
+	console.log(x);
+	/**
+		This behavior changes, when using the let declaration introduced in ECMAScript 6.
+	**/
+	if (true) {
+	  let y = 5;
+	}
+	//console.log(y);
+	
+	const z =10;
+	console.log(z);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

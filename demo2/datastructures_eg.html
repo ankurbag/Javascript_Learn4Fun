@@ -1,0 +1,45 @@
+<!doctype html>
+<html >
+<head>
+
+<script>
+	/**
+		Data types
+	/**
+	 * 6 Basic Datatypes :
+		1.null
+		2.undefined
+		3.String
+		4.number
+		5.symbols
+		6.boolean
+	 */
+	var x=null ;
+	console.log(x === null); 
+	
+	var y;
+	console.log(y === undefined);
+	//Unique Identifier of an object
+	//It separates the internal properties from the public ones
+	//A data type whose instances are unique and immutable.
+	var sym1 = Symbol();
+	var sym2 = Symbol("foo");
+	var sym3 = Symbol("foo");
+	console.log(sym1);
+	
+	/**
+	Data type conversion
+	**/
+	var answer = 42;
+	console.log(answer - "6wewe"); // Subtracts string
+	console.log(answer * "6"); // Multiplies string
+	console.log(answer + "6ad");
+	console.log(+"1.1"+ +"1.1");
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

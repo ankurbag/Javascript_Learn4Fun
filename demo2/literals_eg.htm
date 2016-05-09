@@ -1,0 +1,54 @@
+<!doctype html>
+<html >
+<head>
+
+<script>
+	/**
+		LIterals
+	/**
+	 *  1.Array
+		2.Boolean
+		3.Float
+		4.Int
+		5.Object
+		6.RegEx
+		7.String
+	 */
+	 /**1.Array **/
+	var coffees = ["French Roast", "Colombian", "Kona"];
+	console.log(coffees); 
+	console.log(coffees[5]); 
+	coffees[5] = 0; 
+	console.log(coffees.length); 
+	/**2.Boolean **/
+	//Creating Boolean objects with an initial value of false
+	var bNoParam = new Boolean();
+	var bZero = new Boolean(0);
+	var bNull = new Boolean(null);
+	var bEmptyString = new Boolean('');
+	var bfalse = new Boolean(false);
+	
+	console.log("bNoParam " +bNoParam);
+	console.log("bZero " + bZero);
+	console.log("bNull"+bNull);
+	console.log("bEmptyString"+bEmptyString);
+	console.log("bfalse"+bfalse);
+	
+	//Creating Boolean objects with an initial value of true
+	var btrue = new Boolean(true);
+	var btrueString = new Boolean('true');
+	var bfalseString = new Boolean('false');
+	var bSuLin = new Boolean('aaaaaaaa');
+	var bArrayProto = new Boolean([]);
+	var bObjProto = new Boolean({});
+	console.log("btrue " +btrue);
+	console.log("btrueString " + btrueString);
+	console.log("bSuLin " + bSuLin);
+	console.log("bArrayProto " + bArrayProto[0]);
+	console.log("bObjProto " + bObjProto);
+</script>
+</head>
+<body>
+
+</body>
+</html>
