@@ -84,12 +84,35 @@
 	
 	console.log("multi --\> " +multi());
 	// Nested Function
-	function getScore(){
-		var num1 =90,num2=10;
-		
+	//closures
+	function sum(x){
+		function inner(y){
+			return x + y;
+		}
+		return inner;
 	}
-	
-	
+	//way 1
+	console.log(sum(5)(4));
+	//way 2
+	inner = sum(40);
+	result = inner(50);
+	console.log(result);
+	//Multiple Nesting
+	z=5;
+	y=11;
+	A(9);
+	function A(x) {
+		//alert("In A" + x + y + z);
+		function B(y) {
+		  //alert("In B")
+		 function C(z) {
+			//alert("In C")
+			  console.log(x + y + z);
+		  }
+		   C(11);
+		}
+		  B(20);
+	}
 	
 	
 	
