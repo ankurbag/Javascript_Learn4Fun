@@ -1,0 +1,66 @@
+<!doctype html>
+<html >
+<head>
+
+
+
+</head>
+<body>
+<form name="selectForm">
+  <p>
+    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <select id="musicTypes" name="musicTypes" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>New Age</option>
+      <option>Classical</option>
+      <option>Opera</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="How many are selected?" /></p>
+</form>
+<script>
+	/**
+		Loops and iteration
+	/**/
+	//1.For statement
+	var step;
+	for(step=0;step<5;step++){
+		console.log("Walking Step"+ (step+1));
+	}
+	
+	var btn = document.getElementById("btn");
+	btn.addEventListener("click",function(){
+		alert('Number of options selected ::'+cntOptions(document.selectForm.musicTypes));
+	});
+	
+	var cntOptions = function(combobox){
+		var cnt = 0;
+		for(var step=0;step<combobox.options.length;step++){
+			if(combobox.options[step].selected)
+				cnt++;
+		}
+		return cnt;
+	}
+	//2.while
+	var b;
+	while (b) {
+		console.log("Hello, world");
+	}
+	//3.for..in and for..of
+	let arr = [3, 5, 7];
+	arr.foo = "hello";
+	arr[10] = "hello";
+	
+
+	for (let i in arr){
+	   console.log(i); // logs "0", "1", "2", "foo"
+	}
+
+	for (let i of arr){
+	   console.log(i); // logs "3", "5", "7"
+	}
+</script>
+</body>
+</html>

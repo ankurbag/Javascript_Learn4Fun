@@ -1,0 +1,114 @@
+<!doctype html>
+<html >
+<head>
+
+
+
+</head>
+<body>
+<script>
+	/**
+		Functions
+	/**/
+	/**
+	If you pass an object (i.e. a non-primitive value, such as Array or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:
+	**/
+	function myFunc(theObject) {
+	  theObject.make = "Toyota";
+	}
+	var mycar = {make: "Honda", model: "Accord", year: 1998};
+	var x, y;
+	x = mycar.make; // x gets the value "Honda"
+	console.log("x ::" + x);
+	myFunc(mycar);
+	y = mycar.make; // y gets the value "Toyota"
+	console.log("y ::" + y);//(the make property was changed by the function)
+	
+	/**
+	Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.
+	**/
+	var num = 10;
+	console.log("num ::"+num);
+	demoFun(num);
+	console.log("num ::"+num);
+	function demoFun(num){
+	  num = num + 5;
+	  console.log("num ::"+num);
+	}
+	/**
+		Function expressions
+	**/
+	var square = function(num){return num * num};
+	console.log(square(5));
+	
+	function map(f,a) {
+	  var result = [], // Create a new Array
+		  i;
+	  for (i = 0; i != a.length; i++)
+		result[i] = f(a[i]);
+	  return result;
+	}
+	
+	map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
+	console.log(map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]))
+	
+	function factorial(n){
+	  if ((n === 0) || (n === 1))
+		return 1;
+	  else
+		return (n * factorial(n - 1));
+	}
+	
+	
+	//Factorial
+	function factorial(n){
+		if(n==0 || n==1) 
+			return 1;
+		else if(n>1)
+			return n * factorial(n-1);
+		else if(n<0)
+		    throw "Error: Factorial is for positive value";
+	}
+	try{
+		console.log("Factorial " +  factorial(-5));
+	}catch(ex){
+		console.log(ex);
+	}
+	/**
+		Function scope
+	**/
+	var num1=20,num2=3;
+	function multi(){
+		return num1 * num2;
+	}
+	
+	console.log("multi --\> " +multi());
+	// Nested Function
+	function getScore(){
+		var num1 =90,num2=10;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>
